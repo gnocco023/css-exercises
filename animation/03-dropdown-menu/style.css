@@ -17,12 +17,28 @@
   padding: 0;
   margin: 0;
   background-color: rgb(99, 97, 97);
-
+  
   display: none;
+
+  transform-origin: top;
+  animation: dropdownAnimation 1.5s ease, bouncingEffect 1.5s ease
 }
 
+
+@keyframes dropdownAnimation{
+  from { height: 0px; }
+  to { height: 250px; }
+}
+
+@keyframes bouncingEffect{
+  80% { transform: scale(1, 1.05); }
+  to { transform: scale(1, 1); }
+}
+
+
+
 ul.dropdown-menu li:hover {
-  background: rgb(47, 46, 46);
+  background: rgb(70, 17, 17);
 }
 
 .visible {
